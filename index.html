@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduBites</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website NAME</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Edubites!!!!</h1>
-    <h2>hi this is yeka!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h2>
-    <h3>3rd change - sree koooknda</h3>
-    <ol>
-        <strong>hello</strong>
-    </ol>
+  <header class="header-fixed">
+    <div class="header-limiter">
+      <h1><a href="#">Website<span>NAME</span></a></h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/lectures">Lectures</a>
+        <a href="/notes">Notes</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Choose your favourite topic to study</h1>
+      <h3>"Watch Videos, read notes and have fun!"</h3>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Available Lectures</h1>
+        <section class="contained">
+          <div class="bg-clip">Artificial Intelligence<span>Theory Course</span></div>
+          <div class="bg-clip" style="background-image: url('https://rimaone.com/wp-content/uploads/2015/12/Header-rimaone.jpg')">C, C++<span>Programming</span></div>
+          <div class="bg-clip">Python<span>Programming</span></div>
+          <div class="bg-clip" style="background-image: url('https://rimaone.com/wp-content/uploads/2015/12/Header-rimaone.jpg')">Cloud Computing<span>Theory Course</span></div>
+          <!-- Add other courses here -->
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Side Navigation -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/">Home</a>
+    <a href="/lectures">Lectures</a>
+    <a href="/notes">Notes</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <span class="navside" onclick="openNav()">☰</span>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row inner">
+      <span class="copyright">© Copyright 2024 WebsiteName</span>
+      <span class="meta">
+        <ul class="links">
+          <a href="/">Home</a>
+          <a href="/lectures">Lectures</a>
+          <a href="/notes">Notes</a>
+          <a href="/contact">Contact</a>
+        </ul>
+        <ul class="icons">
+          <li><a class="fab fa-2x fa-youtube-play" href="https://www.youtube.com/"></a></li>
+          <li><a class="fab fa-2x fa-linkedin-square" href="#"></a></li>
+        </ul>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Attribution -->
+  <div class="attribution">
+    <p>Website designed and developed by <strong><a href="https://www.linkedin.com/in/aalokyadav96/" style="color:#ffffff;">Aalok Yadav</a></strong></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+/* Header styles */
+.header-fixed {
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px #ccc;
+    padding: 20px 40px;
+    color: #000;
+  }
+  
+  .header-limiter h1 span {
+    color: #5383d3;
+  }
+  
+  .header-fixed nav a {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('https://rimaone.com/wp-content/uploads/2015/12/Header-rimaone.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+  }
+  
+  .hero-content h1, .hero-content h3 {
+    margin: 0;
+  }
+  
+  /* Main Content */
+  .main {
+    background-color: aliceblue;
+  }
+  
+  .contained {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .bg-clip {
+    font-size: 56px;
+    padding: 1em;
+    color: white;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  /* Side Navigation */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .sidenav a {
+    font-size: 25px;
+    color: white;
+  }
+  
+  .navside {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 30px;
+    background: #ccc;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4c458b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .links a {
+    margin-right: 20px;
+    color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .bg-clip {
+      width: 100%;
+      font-size: 32px;
+    }
+  }
+  
