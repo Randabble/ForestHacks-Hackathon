@@ -21,9 +21,13 @@ Our project streamlines the discovery of educational videos and takes a data-dri
 ## Team
 
 Sree: Back-End Developer & Research Analyst
+
 Yekalaivan: Back-End Developer
+
 Galina: Back-End & AI Developer
+
 Nikolai: Back-End & AI Developer
+
 Tanishka: Front-End Developer & UX/UI Designer
 
 ## Acknowledgments
