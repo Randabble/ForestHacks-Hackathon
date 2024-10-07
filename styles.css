@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+  position: relative; /* Required for positioning the pseudo-element */
+  text-align: center;
+  color: rgb(255, 255, 255); /* Ensures the text is readable on the background */
+  padding: 150px 0; /* Adds padding for spacing */
+}
+
+/* Pseudo-element for the background overlay */
+header::before {
+  content: '';
+  position: absolute; /* Position the overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://th.bing.com/th/id/R.5b1d0ccb4cd96705258a2b1db57ff6ec?rik=SmnWAvNPtCTTag&pid=ImgRaw&r=0'); /* Same image as the header */
+  background-size: cover; /* Ensures the image covers the entire header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  opacity: 0.8; /* Adjust opacity here (0.0 to 1.0) */
+  filter: brightness(0.5);
+  z-index: 0; /* Ensures the overlay is below the text */
+}
+
+header h1, header h2 {
+  position: relative; /* Bring the text above the overlay */
+  z-index: 1; /* Ensure the text is above the overlay */
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #091c65;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #555;
+}
+
+/* Styling for the section */
+.content-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center; /* Center the content wrapper */
+  align-items: center; /* Center the items vertically */
+}
+
+/* Wrapper to contain both text and image */
+.content-wrapper {
+  display: flex; /* Use Flexbox to layout text and image */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width */
+}
+
+/* Image container, takes 50% of the width */
+.image-content {
+  width: 50%; /* Adjust width as needed */
+  display: flex; /* Allow for centering the image inside */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+/* Text styling, takes 50% of the width */
+.text-content {
+  width: 50%; /* Adjust width as needed */
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Adds space between the image and text */
+}
+
+/* Image styling */
+.image-content img {
+  max-width: 100%; /* Ensures the image fits within its container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .social-icons a:hover {
+    color: #4CAF50;
+}
