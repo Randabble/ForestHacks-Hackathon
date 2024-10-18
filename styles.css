@@ -331,7 +331,7 @@
 }
 /* Center the content */
 .center-content {
-  display: flex;
+  display: flex; /*guys flex is */
   justify-content: center;
   align-items: center;
   min-height: 50vh; /* Takes up at least half the page */
