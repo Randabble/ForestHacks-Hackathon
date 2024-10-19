@@ -35,9 +35,12 @@
       </ul>
     </div>
   </nav>
+
+
   <header>
     <h1>Create your profile</h1> <!-- Header text -->
-</header>
+  </header>
+
   <br>
   <h1>Choose Your Interests</h1>
   <div class="center-content">
@@ -53,11 +56,30 @@
         <button>Health</button>
         <button>DIY</button>
     </div>
-    <button id="form-submit">Submit</button>
-</div>
+  </div>
+  <br>
+
+  <br>
+  <h1>Choose Your Interests</h1>
+  <form action="submit_interests.php" method="POST">
+      <div class="interests">
+          <label><input type="button" name="interests" value="Math">Math</label>
+          <label><input type="button" name="interests" value="Science">Science</label>
+          <label><input type="button" name="interests" value="Social Studies">Social Studies</label>
+          <label><input type="button" name="interests" value="Gaming">Gaming</label>
+          <label><input type="button" name="interests" value="Art">Art</label>
+          <label><input type="button" name="interests" value="Programming">Programming</label>
+          <label><input type="button" name="interests" value="Fitness">Fitness</label>
+          <label><input type="button" name="interests" value="Health">Health</label>
+          <label><input type="button" name="interests" value="DIY">DIY</label>
+      </div>
+      <div class="submit-container">
+          <button type="submit">Submit</button>
+      </div>
+  </form>
   <br>
   
-
+  
   <!-- Footer -->
   <div class="footer__container">
     <div class="footer__links">

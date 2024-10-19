@@ -334,7 +334,7 @@
   display: flex; /*guys flex is */
   justify-content: center;
   align-items: center;
-  min-height: 50vh; /* Takes up at least half the page */
+  min-height: 60vh; /* Takes up at least half the page */
 }
 
 /* Button container using CSS Grid for layout */
@@ -380,13 +380,79 @@
   transition: 0.5s;
 }
 
-#form-submit button {
-  background: #0066A2;
-  color: white;
-  border-style: outset;
-  border-color: #0066A2;
-  height: 50px;
-  width: 100px;
-  font: bold15px arial,sans-serif;
-  text-shadow: none;
+
+/* General styles for the interests form */
+.interests {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of interest buttons */
+  justify-content: center;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.interests label {
+  margin: 10px; /* Added margin for spacing */
+  cursor: pointer;
+  width: 165px;
+  height: 62px;
+  background: #100720;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background 0.2s, transform 0.1s; /* Smooth transitions */
+}
+
+/* Glowing effect for interest buttons */
+.interests label::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 176, 176, 0.5) 17.8%, rgba(242, 40, 40, 0.5) 100.2%);
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 1rem;
+}
+
+/* Hover effect for interest buttons */
+.interests label:hover {
+  background: #484155; /* Change color on hover */
+}
+
+/* Active state for interest buttons */
+.interests label:active {
+  transform: scale(0.95); /* Slightly reduce size */
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%);
+}
+
+/* Submit button styling */
+.submit-container {
+  display: flex;
+  justify-content: center; /* Center the submit button */
+  margin-top: 20px; /* Add spacing above the button */
+}
+
+.submit-container button {
+  width: 200px; /* Wider submit button */
+  height: 50px; /* Adjusted height */
+  background: #100720;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s; /* Smooth transitions */
+}
+
+.submit-container button:hover {
+  background: #484155; /* Change color on hover */
+}
+
+.submit-container button:active {
+  transform: scale(0.95); /* Slightly reduce size */
 }
