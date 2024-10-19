@@ -424,16 +424,16 @@ button:active {
   border-radius: 1rem;
 }
 
-/* Hover effect for interest buttons */
-.interests label:hover {
-  background: #484155; /* Change color on hover */
-}
+/* Hover effect for interest buttons */ 
+.interests label:hover { 
+  background: #484155; /* Change color on hover */ 
+} 
 
-/* Active state for interest buttons */
-.interests label:active {
-  transform: scale(0.95); /* Slightly reduce size */
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%);
-}
+/* Active state for interest buttons */ 
+.interests label:active { 
+  transform: scale(0.95); /* Slightly reduce size */ 
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%); 
+} 
 
 /* Submit button styling */
 .submit-container {
