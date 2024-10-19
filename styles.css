@@ -386,12 +386,16 @@ button:active {
 }
 
 
+/* start of interest form - tanishka */
+
 /* General styles for the interests form */
 .interests {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping of interest buttons */
-  justify-content: center;
-  margin-bottom: 20px; /* Added margin for spacing */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+  gap: 20px; /* Spacing between buttons */
+  width: 400px; /* Adjusts width to keep it centered and compact */
+  max-width: 90%; /* Responsive layout for smaller screens */
+  margin-bottom: 40px; /* Space between buttons and Submit */
 }
 
 .interests label {
