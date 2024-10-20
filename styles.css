@@ -487,3 +487,71 @@ button:active {
 .submit-container button:active {
   transform: scale(0.95); /* Slightly reduce size */
 }
+
+/* Shorts page html */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.shorts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #e6f7ff;
+}
+
+.video-display {
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.interaction-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon-button:hover {
+  color: blue;
+}
+
+.down-button {
+  margin-top: 10px;
+}
+
+.down-button button {
+  background-color: #ffcccc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.down-button button:hover {
+  background-color: #ff9999;
+}
+

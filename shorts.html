@@ -13,7 +13,7 @@
     <!-- creates a div with the class of navbar_container -->
     <div class="navbar__container">
       <!-- links to logo -->
-      <a href="./images/Preview.png" id="navbar__logo">Edu Bites</a>
+      <a href="/" id="navbar__logo">Edu Bites</a>
       <div class="navbar__toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -35,77 +35,30 @@
       </ul>
     </div>
   </nav>
-  <header>
 
-</header>
-  <br>
-  <br>
-  
-
-  <!-- Footer -->
-  <div class="footer__container">
-    <div class="footer__links">
-      <div class="footer__link--wrapper">
-        <div class="footer__link--items">
-          <h2>About Us</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div>
-        <div class="footer__link--items">
-          <h2>Contact Us</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div>
-      </div>
-      <div class="footer__link--wrapper">
-        <div class="footer__link--items">
-          <h2>Our Team</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div>
-        <div class="footer__link--items">
-          <h2>Social Media</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div>
-      </div>
+  <!-- Body/Shorts viewing area -->
+  <div class="shorts-container">
+    <!-- Video display area -->
+    <div id="video-display" class="video-display">
+        <p>Video will be displayed here</p>
     </div>
-    <div class="social__media">
-      <div class="social__media--wrap">
-        <div class="footer__logo">
-          <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Edu Bites</a>
-        </div>
-        <p class="website__rights">© Edu Bites 2024. All rights reserved</p>
-        <div class="social__icons">
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </div>
+    
+    <!-- Like and Dislike buttons -->
+    <div class="interaction-buttons">
+        <button id="like-btn" class="icon-button">
+            👍 <span id="like-count">1M</span>
+        </button>
+        <button id="dislike-btn" class="icon-button">
+            👎 <span id="dislike-count">917</span>
+        </button>
+    </div>
+
+    <!-- Down button for loading next video -->
+    <div class="down-button">
+        <button id="next-btn" onclick="loadNextVideo()">⬇️ Next Video</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="shorts.js"></script>
 </body>
 </html>
