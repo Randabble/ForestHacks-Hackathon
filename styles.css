@@ -453,7 +453,7 @@ button:active {
 /* Hover effect for interest buttons */ 
 .interests label:hover { 
   background: #484155; /* Change color on hover */ 
-} 
+}
 
 /* Active state for interest buttons */ 
 .interests label:active { 

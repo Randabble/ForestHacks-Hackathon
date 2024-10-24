@@ -1,8 +1,8 @@
 // Placeholder for videos
 const videos = [
-    "Video 1: Learn Math!",
-    "Video 2: How to Add!",
-    "Video 3: Subtracting Basics!"
+    "Video 1: Learn Math",
+    "Video 2: How to Add",
+    "Video 3: Subtracting Basics"
 ];
 
 let currentVideoIndex = 0;
