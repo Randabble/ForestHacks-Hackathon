@@ -108,7 +108,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #c6711071;
+  background-color: #cb1818b4;
 }
 
 /* Navbar Styles (already provided in your code) */
@@ -142,12 +142,32 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('background.jpg'); /* Placeholder for any hero image */
-  background-size: cover;
-  background-position: center;
+  position: relative; /* Necessary to contain the ::before element */
   padding: 100px 20px;
   text-align: center;
-  color: rgb(59, 59, 59);
+  color: #fff;
+  overflow: hidden; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.ctfassets.net/p0qf7j048i0q/6CoR3gS2NgLRPCV9qXURfQ/a380ddaba2b6f5d07799b4bd20f80bcb/G1147656393.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+/* Ensure text is positioned above the overlay */
+.hero-text {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text h1 {
@@ -160,6 +180,7 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
+/* Button styling */
 .cta-button {
   background-color: #e44a4a;
   color: rgb(59, 59, 59);
@@ -553,5 +574,105 @@ body {
 
 .down-button button:hover {
   background-color: #ff9999;
+}
+
+/* Our Vision Section */
+.vision-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #D4C5C5;
+}
+.vision-text {
+  flex: 1;
+  padding: 20px;
+}
+.vision-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.vision-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+.vision-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.vision-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.thoughts-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #D4C5C5;
+  flex-direction: row;
+}
+
+.thoughts-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.thoughts-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.thoughts-image img {
+  max-width: 85%;
+  height: auto;
+  border-radius: 10px;
+}
+.thoughts-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.thoughts-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Future Steps Section */
+.future-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #D4C5C5;
+}
+.future-text {
+  flex: 1;
+  padding: 20px;
+}
+.future-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.future-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+.future-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.future-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
