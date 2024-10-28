@@ -111,6 +111,15 @@ body {
   background-color: #ffffffb4;
 }
 
+h2 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffffb4;
+}
+
 /* Navbar Styles (already provided in your code) */
 nav {
   background-color: #333;
@@ -518,7 +527,7 @@ button:active {
   justify-content: center;
   height: 100vh;
   padding: 20px;
-  background-color: #005177;
+  background-color: #6a2727;
 }
 
 .video-display {
@@ -549,7 +558,7 @@ button:active {
 }
 
 .icon-button:hover {
-  color: blue;
+  color: rgb(138, 67, 67);
 }
 
 .down-button {
@@ -669,3 +678,60 @@ button:active {
   margin: 0 auto;
 }
 
+/* Sign up page */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eabeb7;
+  height: auto;
+  width: auto;
+  border: 2px solid #264143;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #e94c4c;
+}
+
+.title {
+  color: #264143;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.sub_title {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.form_style {
+  outline: none;
+  border: 2px solid #264143;
+  box-shadow: 3px 4px 0px 1px #e94c4c;
+  width: 290px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.link {
+  font-weight: 800;
+  color: #264143;
+  padding: 5px;
+}
