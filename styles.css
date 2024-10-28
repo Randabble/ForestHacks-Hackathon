@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .navbar {
@@ -86,7 +87,7 @@
   height: 100%;
   width: 100%;
   border: none;
-  outline:none;
+  outline: none;
   border-radius: 4px;
   background: #f77062;
   color: #fff;
@@ -146,7 +147,7 @@ nav ul li a:hover {
   padding: 100px 20px;
   text-align: center;
   color: #fff;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .hero::before {
@@ -156,7 +157,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.ctfassets.net/p0qf7j048i0q/6CoR3gS2NgLRPCV9qXURfQ/a380ddaba2b6f5d07799b4bd20f80bcb/G1147656393.jpg');
+  background-image: url("https://images.ctfassets.net/p0qf7j048i0q/6CoR3gS2NgLRPCV9qXURfQ/a380ddaba2b6f5d07799b4bd20f80bcb/G1147656393.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.7;
@@ -191,7 +192,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-  background-color: #FFB26B;
+  background-color: #ffb26b;
 }
 
 /* Features Section */
@@ -207,7 +208,7 @@ nav ul li a:hover {
   flex: 1;
   padding: 20px;
   margin: 10px;
-  background: linear-gradient(135deg, #FFB26B 50%, rgb(230, 117, 18) 100%);
+  background: linear-gradient(135deg, #ffb26b 50%, rgb(230, 117, 18) 100%);
   border-radius: 10px;
 }
 
@@ -271,7 +272,7 @@ nav ul li a:hover {
 }
 
 .aboutus {
-  color: white
+  color: white;
 }
 .footer__link--items {
   display: flex;
@@ -284,7 +285,7 @@ nav ul li a:hover {
 }
 
 .footer__link--items h2 {
-  margin-bottom: 16px
+  margin-bottom: 16px;
 }
 
 .footer__link--items > h2 {
@@ -351,7 +352,7 @@ nav ul li a:hover {
   #footer__logo {
     margin-bottom: 2rem;
   }
-  
+
   .website__rights {
     margin-bottom: 2rem;
   }
@@ -370,7 +371,7 @@ nav ul li a:hover {
     margin: 0;
     padding: 10px;
     width: 100%;
-   }
+  }
 }
 
 /* Full-page container */
@@ -410,10 +411,14 @@ button {
 
 /* Glowing effect */
 button::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(176, 176, 176) 17.8%, rgb(242, 40, 40) 100.2%);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(176, 176, 176) 17.8%,
+    rgb(242, 40, 40) 100.2%
+  );
   filter: blur(15px);
   z-index: -1;
   position: absolute;
@@ -424,10 +429,13 @@ button::after {
 /* Button active state */
 button:active {
   transform: scale(0.9) rotate(3deg);
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%);
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(250, 41, 41) 17.8%,
+    rgb(176, 176, 176) 100.2%
+  );
   transition: 0.5s;
 }
-
 
 /* start of interest form - tanishka */
 
@@ -459,10 +467,14 @@ button:active {
 
 /* Glowing effect for interest buttons */
 .interests label::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 176, 176, 0.5) 17.8%, rgba(242, 40, 40, 0.5) 100.2%);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(176, 176, 176, 0.5) 17.8%,
+    rgba(242, 40, 40, 0.5) 100.2%
+  );
   filter: blur(15px);
   z-index: -1;
   position: absolute;
@@ -471,16 +483,20 @@ button:active {
   border-radius: 1rem;
 }
 
-/* Hover effect for interest buttons */ 
-.interests label:hover { 
-  background: #484155; /* Change color on hover */ 
+/* Hover effect for interest buttons */
+.interests label:hover {
+  background: #484155; /* Change color on hover */
 }
 
-/* Active state for interest buttons */ 
-.interests label:active { 
-  transform: scale(0.95); /* Slightly reduce size */ 
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%); 
-} 
+/* Active state for interest buttons */
+.interests label:active {
+  transform: scale(0.95); /* Slightly reduce size */
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(250, 41, 41) 17.8%,
+    rgb(176, 176, 176) 100.2%
+  );
+}
 
 /* Submit button styling */
 .submit-container {
@@ -507,6 +523,133 @@ button:active {
 
 .submit-container button:active {
   transform: scale(0.95); /* Slightly reduce size */
+}
+
+/* Button End */
+
+/* Toggles */
+#app-cover {
+  display: table;
+  width: 600px;
+  margin: 80px auto;
+  counter-reset: button-counter;
+}
+
+.row {
+  display: table-row;
+}
+
+.toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  width: 200px;
+  height: 140px;
+  box-sizing: border-box;
+}
+
+.button-cover {
+  height: 100px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px -8px #c5d6d6;
+  border-radius: 4px;
+}
+
+.button-cover:before {
+  counter-increment: button-counter;
+  content: counter(button-counter);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.button.b2 {
+  border-radius: 2px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before {
+  content: "YES";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before {
+  content: "NO";
+  left: 42px;
+  background-color: #f44336;
+}
+
+#button-1 .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+  transition: 0.3s ease all;
 }
 
 /* Shorts page html */
@@ -574,7 +717,7 @@ button:active {
   display: flex;
   align-items: center;
   padding: 50px 20px;
-  background-color: #D4C5C5;
+  background-color: #d4c5c5;
 }
 .vision-text {
   flex: 1;
@@ -601,12 +744,11 @@ button:active {
   margin: 0 auto;
 }
 
-
 .thoughts-section {
   display: flex;
   align-items: center;
   padding: 50px 20px;
-  background-color: #D4C5C5;
+  background-color: #d4c5c5;
   flex-direction: row;
 }
 
@@ -642,7 +784,7 @@ button:active {
   display: flex;
   align-items: center;
   padding: 50px 20px;
-  background-color: #D4C5C5;
+  background-color: #d4c5c5;
 }
 .future-text {
   flex: 1;
@@ -668,4 +810,3 @@ button:active {
   max-width: 700px;
   margin: 0 auto;
 }
-
