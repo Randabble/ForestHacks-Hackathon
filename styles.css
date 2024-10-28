@@ -108,7 +108,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #cb1818b4;
+  background-color: #ffffffb4;
 }
 
 /* Navbar Styles (already provided in your code) */
@@ -511,13 +511,6 @@ button:active {
 
 /* Shorts page html */
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
-
 .shorts-container {
   display: flex;
   flex-direction: column;
@@ -525,13 +518,13 @@ body {
   justify-content: center;
   height: 100vh;
   padding: 20px;
-  background-color: #e6f7ff;
+  background-color: #005177;
 }
 
 .video-display {
   width: 300px;
   height: 500px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -564,7 +557,7 @@ body {
 }
 
 .down-button button {
-  background-color: #ffcccc;
+  background-color: #000000;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
