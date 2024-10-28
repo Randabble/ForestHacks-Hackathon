@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
   <!-- navbar class -->
@@ -31,6 +32,7 @@
   
   <br>
   <h2 class="heading">Save your progress through an EduBites account!</h2>
+  <br>
   <div class="container">
       <div class="form_area">
           <p class="title">Your Account</p>
@@ -43,15 +45,15 @@
                   <label class="sub_title" for="password">Password</label>
                   <input placeholder="Enter your password" id="password" class="form_style" type="password" required>
               </div>
-              <button type="submit" class="btn">SIGN UP</button>
-              <button type="submit" class="btn">LOG IN</button>
+              <br>
+              <p id="message" class="error-message">Press SIGN UP or LOG IN to proceed</p>
+              <br>
+              <button type="button" class="btn" onclick="checkUsername()">SIGN UP</button>
+              <button type="button" class="btn" onclick="checkUsername()">LOG IN</button>
+              <div><a class="link" href=""></a></div>
           </form>
       </div>
   </div>
-</body>
-</html>
-
-
 
     <!-- <form action="signup.php" method="POST">
         User Name:
@@ -60,5 +62,6 @@
           <input type="password" id="password" name="password" />
         <input name="submit" id="submit" type="submit" value="Login" />
     </form> -->
+
 </body>
 </html>
