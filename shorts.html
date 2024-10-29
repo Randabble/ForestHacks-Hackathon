@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edu Bites</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- navbar class -->
+  <nav class="navbar">
+    <!-- creates a div with the class of navbar_container -->
+    <div class="navbar__container">
+      <!-- links to logo -->
+      <a href="/" id="navbar__logo">Edu Bites</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="./index.html" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="./shorts.html" class="navbar__links">Shorts</a>
+        </li>
+        <li class="navbar__item">
+          <a href="./login.html" class="navbar__links">Login</a>
+        </li>
+        <li class="navbar__btn">
+          <a href="./signup.html" class="navbarbutton">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Body/Shorts viewing area -->
+  <div class="shorts-container">
+    <!-- Video display area -->
+    <div id="video-display" class="video-display">
+      <p>Video will be displayed here</p>
+    </div>
+  
+    <!-- Video and Channel Information -->
+     <div class="video-info">
+      <h3 id="video-title">Video Title Here</h3>
+      <p id="channel-name">Channel Name Here</p>
+    </div>
+
+    <!-- Like and Dislike buttons -->
+    <div class="interaction-buttons">
+      <button id="like-btn" class="icon-button">👍 <span id="like-count">0</span></button>
+      <button id="dislike-btn" class="icon-button">👎 <span id="dislike-count">0</span></button>
+      <button id="share-btn" class="icon-button">🔗 Share</button>
+    </div>
+
+    <!-- Down button for loading next video -->
+    <div class="down-button">
+        <button id="next-btn" onclick="loadNextVideo()">⬇️ Next Video</button>
+    </div>
+  </div>
+</body>
+</html>
