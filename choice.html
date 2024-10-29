@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/dd5b6b608a.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: rgb(255, 223, 223)">
   <!-- navbar class -->
   <nav class="navbar">
     <!-- creates a div with the class of navbar_container -->
     <div class="navbar__container">
       <!-- links to logo -->
-      <a href="./images/Preview.png" id="navbar__logo">Edu Bites</a>
+      <a href="/" id="navbar__logo">Edu Bites</a>
       <div class="navbar__toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -21,95 +21,84 @@
       </div>
       <ul class="navbar__menu">
         <li class="navbar__item">
-          <a href="/" class="navbar__links">Home</a>
+          <a href="/index.html" class="navbar__links">Home</a>
         </li>
         <li class="navbar__item">
-          <a href="/tech.html" class="navbar__links">Tech</a>
+          <a href="/shorts.html" class="navbar__links">Shorts</a>
         </li>
         <li class="navbar__item">
-          <a href="/" class="navbar__links">Products</a>
+          <a href="/login.html" class="navbar__links">Login</a>
         </li>
         <li class="navbar__btn">
-          <a href="/choice.html" class="button">Sign Up</a>
+          <a href="/signup.html" class="navbarbutton">Sign Up</a>
         </li>
       </ul>
     </div>
   </nav>
-
-
-  <header>
-    <h1>Create your profile</h1> <!-- Header text -->
-  </header>
-
-  <br>
-  <h1>Choose Your Interests</h1>
-  <div class="page-container">
-    <div class="button-container">
-        <button>Math</button>
-        <button>Science</button>
-        <button>English</button>
-        <button>Social Studies</button>
-        <button>Art</button>
-        <button>Coding</button>
-    </div>
-    <div class="center-content">
-        <button id="form-submit">Submit</button>
-    </div>
-  </div>
-  <br>
-
-  <br>
-  <h1>Choose Your Interests</h1>
+  
+  <h1 style="text-align: center;">Choose Your Interests</h1>
+  <br><br><br><br>
   <form class="page-container" action="submit_interests.php" method="POST">
-      <div class="interests">
-          <label><button type="button" name="interests" value="Math">Math</button></label>
-          <label><button type="button" name="interests" value="Science">Science</button></label>
-          <label><button type="button" name="interests" value="Social Studies">Social Studies</button></label>
-          <label><button type="button" name="interests" value="English">English</button></label>
-      </div>
-      <div class="submit-container">
-          <button type="submit">Submit</button>
-      </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="button r" id="button-math">
+                <input type="checkbox" class="checkbox" name="interests[]" value="Math" id="math-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="math-toggle" class="subject-label">Math</label>
+        </div>
+        <div class="toggle">
+            <div class="button r" id="button-science">
+                <input type="checkbox" class="checkbox" name="interests[]" value="Science" id="science-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="science-toggle" class="subject-label">Science</label>
+        </div>
+        <div class="toggle">
+            <div class="button r" id="button-social">
+                <input type="checkbox" class="checkbox" name="interests[]" value="Social Studies" id="social-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="social-toggle" class="subject-label">Social Studies</label>
+        </div>
+        <div class="toggle">
+            <div class="button r" id="button-english">
+                <input type="checkbox" class="checkbox" name="interests[]" value="English" id="english-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="english-toggle" class="subject-label">English</label>
+        </div>
+    </div>
+    <div class="submit-container">
+        <button type="submit">
+          <a class="submitbuttonshorts" href="/shorts.html">Submit</a>
+        </button>
+    </div>
   </form>
   <br>
-  
-  
+  <br><br><br><br><br><br>
   <!-- Footer -->
   <div class="footer__container">
     <div class="footer__links">
       <div class="footer__link--wrapper">
         <div class="footer__link--items">
           <h2>About Us</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div>
-        <div class="footer__link--items">
-          <h2>Contact Us</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
+
+          <div class="aboutus">EduTube's objective is to revolutionize learning for children by providing short, engaging videos that make education fun and interactive. Our vision is to inspire young learners to explore a variety of subjects in an exciting way, promoting curiosity and growth with gamified learning experiences and personalized content</div>
         </div>
       </div>
       <div class="footer__link--wrapper">
         <div class="footer__link--items">
-          <h2>Our Team</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
-          <a href="/">Terms of Service</a>
-        </div>
-        <div class="footer__link--items">
-          <h2>Social Media</h2>
-          <a href="/">How it works</a>
-          <a href="/">Testimonials</a>
-          <a href="/">Careers</a>
-          <a href="/">Investments</a>
+          <h2>Contact Us</h2>
+          <a href="mailto:edubites@gmail.com">Email: edubites@gmail.com</a>
+          <div style = "color:white">Our Team: We're a team of enthusiastic highschoolers looking to make a difference in the field of education</div>
+          <br>
+          <div style = "color:white">Credits: Forest Hacks Hackathon</div>
+          <br>
           <a href="/">Terms of Service</a>
         </div>
       </div>
@@ -121,18 +110,17 @@
         </div>
         <p class="website__rights">© Edu Bites 2024. All rights reserved</p>
         <div class="social__icons">
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="/" class="social__icon--link" target="_blank">
+          <a href="https://www.instagram.com/edubites1" class="social__icon--link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-youtube"></i>
+          
+          <a href="https://www.tiktok.com/@atedubites" class="social__icon--link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
           </a>
-          <a href="/" class="social__icon--link" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
+          
+          <a href="https://twitter.com/atedubites" class="social__icon--link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>          
         </div>
       </div>
     </div>

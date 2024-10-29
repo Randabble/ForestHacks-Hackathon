@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .navbar {
@@ -86,7 +87,7 @@
   height: 100%;
   width: 100%;
   border: none;
-  outline:none;
+  outline: none;
   border-radius: 4px;
   background: #f77062;
   color: #fff;
@@ -104,11 +105,21 @@
 /* Body */
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #c6711071;
+  background-color: #ffffffb4;
+}
+
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Navbar Styles (already provided in your code) */
@@ -142,12 +153,32 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('background.jpg'); /* Placeholder for any hero image */
-  background-size: cover;
-  background-position: center;
+  position: relative; /* Necessary to contain the ::before element */
   padding: 100px 20px;
   text-align: center;
-  color: rgb(59, 59, 59);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.ctfassets.net/p0qf7j048i0q/6CoR3gS2NgLRPCV9qXURfQ/a380ddaba2b6f5d07799b4bd20f80bcb/G1147656393.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+/* Ensure text is positioned above the overlay */
+.hero-text {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text h1, .hero-text p {
@@ -155,6 +186,7 @@ nav ul li a:hover {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
 }
 
+/* Button styling */
 .cta-button {
   background-color: #e44a4a;
   color: rgb(59, 59, 59);
@@ -165,9 +197,13 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
+<<<<<<< HEAD
   background-color: #f77062; /* More consistent with your brand color */
   color: #fff; /* Ensure text remains visible */
   transition: all 0.3s ease;
+=======
+  background-color: #ffb26b;
+>>>>>>> 1c1402e68ebe7a5fdb19a594449391df09da5e49
 }
 
 
@@ -184,7 +220,7 @@ nav ul li a:hover {
   flex: 1;
   padding: 20px;
   margin: 10px;
-  background: linear-gradient(135deg, #FFB26B 50%, rgb(230, 117, 18) 100%);
+  background: linear-gradient(135deg, #ffb26b 50%, rgb(230, 117, 18) 100%);
   border-radius: 10px;
 }
 
@@ -248,7 +284,7 @@ nav ul li a:hover {
 }
 
 .aboutus {
-  color: white
+  color: white;
 }
 .footer__link--items {
   display: flex;
@@ -261,7 +297,7 @@ nav ul li a:hover {
 }
 
 .footer__link--items h2 {
-  margin-bottom: 16px
+  margin-bottom: 16px;
 }
 
 .footer__link--items > h2 {
@@ -326,133 +362,366 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Ensures full-page height */
-  padding: 20px; /* Adds some padding around the content */
-  box-sizing: border-box; /* Prevents content overflow */
 }
 
-/* CSS Grid for the button container */
-.button-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
-  gap: 20px; /* Spacing between buttons */
-  width: 400px; /* Adjusts width to keep it centered and compact */
-  max-width: 90%; /* Responsive layout for smaller screens */
-  margin-bottom: 40px; /* Space between buttons and Submit */
-}
-
-/* General button styling (including Submit button) */
-button {
-  width: 180px; /* Slightly larger buttons */
-  height: 62px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 17px;
-  border-radius: 1rem;
-  border: none;
-  background: #100720;
-  transition: 0.1s;
-  position: relative;
-}
-
-/* Glowing effect */
-button::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(176, 176, 176) 17.8%, rgb(242, 40, 40) 100.2%);
-  filter: blur(15px);
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* Button active state */
-button:active {
-  transform: scale(0.9) rotate(3deg);
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%);
-  transition: 0.5s;
-}
-
-
-/* start of interest form - tanishka */
-
-/* General styles for the interests form */
-.interests {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
-  gap: 20px; /* Spacing between buttons */
-  width: 400px; /* Adjusts width to keep it centered and compact */
-  max-width: 90%; /* Responsive layout for smaller screens */
-  margin-bottom: 40px; /* Space between buttons and Submit */
-}
-
-.interests label {
-  margin: 10px; /* Added margin for spacing */
-  cursor: pointer;
-  width: 165px;
-  height: 62px;
-  background: #100720;
-  color: #fff;
-  font-size: 17px;
-  border-radius: 1rem;
+.toggle-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: background 0.2s, transform 0.1s; /* Smooth transitions */
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
 
-/* Glowing effect for interest buttons */
-.interests label::after {
-  content: '';
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subject-label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Retaining original toggle styles */
+.button {
+  position: relative;
+  width: 74px;
+  height: 36px;
+  overflow: hidden;
+  top: 0;
+  margin: 0 auto;
+}
+
+.button.r, .button.r .layer {
+  border-radius: 100px;
+}
+
+.checkbox {
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 176, 176, 0.5) 17.8%, rgba(242, 40, 40, 0.5) 100.2%);
-  filter: blur(15px);
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 1rem;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
 }
 
-/* Hover effect for interest buttons */ 
-.interests label:hover { 
-  background: #484155; /* Change color on hover */ 
-} 
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
+<<<<<<< HEAD
 /* Active state for interest buttons */ 
 .interests label:active { 
   transform: scale(0.95); /* Slightly reduce size */ 
   background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%); 
+=======
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+/* Knob styling and animation for each toggle */
+.knobs:before {
+  content: "YES";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+.checkbox:checked + .knobs:before {
+  content: "NO";
+  left: 42px;
+  background-color: #f44336;
+}
+
+.checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+}
+
+.knobs,
+.knobs:before,
+.layer {
+  transition: 0.3s ease all;
+}
+
+.submitbuttonshorts {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+>>>>>>> 1c1402e68ebe7a5fdb19a594449391df09da5e49
 }
 
 /* Submit button styling */
 .submit-container {
   display: flex;
-  justify-content: center; /* Center the submit button */
-  margin-top: 20px; /* Add spacing above the button */
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .submit-container button {
-  width: 200px; /* Wider submit button */
-  height: 50px; /* Adjusted height */
+  width: 200px;
+  height: 50px;
   background: #100720;
   color: #fff;
   font-size: 18px;
   border: none;
   border-radius: 1rem;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s; /* Smooth transitions */
+  transition: background 0.2s, transform 0.1s;
 }
 
 .submit-container button:hover {
-  background: #484155; /* Change color on hover */
+  background: #484155;
 }
 
 .submit-container button:active {
-  transform: scale(0.95); /* Slightly reduce size */
+  transform: scale(0.95);
+}
+
+/* Shorts page html */
+
+.shorts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #ffe6e6;
+}
+
+.video-display {
+  width: 300px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.interaction-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon-button:hover {
+  color: rgb(138, 67, 67);
+}
+
+.down-button {
+  margin-top: 10px;
+}
+
+.down-button button {
+  background-color: rgb(253, 132, 136);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.down-button button:hover {
+  background-color: #f14848;
+}
+
+/* Our Vision Section */
+.vision-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: rgb(255, 223, 223);
+}
+.vision-text {
+  flex: 1;
+  padding: 20px;
+}
+.vision-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.vision-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+.vision-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.vision-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.thoughts-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: rgb(255, 223, 223);
+  flex-direction: row;
+}
+
+.thoughts-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.thoughts-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.thoughts-image img {
+  max-width: 85%;
+  height: auto;
+  border-radius: 10px;
+}
+.thoughts-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.thoughts-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Future Steps Section */
+.future-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: rgb(255, 223, 223);
+}
+.future-text {
+  flex: 1;
+  padding: 20px;
+}
+.future-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.future-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+.future-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.future-section p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sign up page */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eabeb7;
+  height: auto;
+  width: auto;
+  border: 2px solid #264143;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #e94c4c;
+}
+
+.title {
+  color: #264143;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.sub_title {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.form_style {
+  outline: none;
+  border: 2px solid #264143;
+  box-shadow: 3px 4px 0px 1px #e94c4c;
+  width: 290px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.link {
+  font-weight: 800;
+  color: #264143;
+  padding: 5px;
 }
