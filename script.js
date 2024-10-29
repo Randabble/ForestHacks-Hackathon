@@ -16,9 +16,9 @@ function checkUsername() {
     const existingUsernames = ["user1", "user2", "user3"]; // Example list of existing usernames
 
     if (existingUsernames.includes(usernameInput)) {
-        messageElement.innerHTML = `That username already exists. <a class="link" href="">Click LOG IN instead!</a>`;
+        messageElement.innerHTML = `That username already exists. <a class="link" href="login.html">Click LOG IN instead!</a>`;
     } else {
-        messageElement.innerHTML = `That username doesn't exist. <a class="link" href="">Click SIGN UP instead!</a>`;
+        messageElement.innerHTML = `That username doesn't exist. <a class="link" href="signup.html">Click SIGN UP instead!</a>`;
     }
 }
 
