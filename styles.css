@@ -174,7 +174,9 @@ nav ul li a:hover {
   font-size: 1.2em;
 }
 .cta-button:hover {
-  background-color: #ffb26b;
+  background-color: #f77062; /* More consistent with your brand color */
+  color: #fff; /* Ensure text remains visible */
+  transition: all 0.3s ease;
 }
 
 /* Features Section */
