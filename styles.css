@@ -174,13 +174,7 @@ nav ul li a:hover {
   font-size: 1.2em;
 }
 .cta-button:hover {
-<<<<<<< HEAD
-  background-color: #f77062; /* More consistent with your brand color */
-  color: #fff; /* Ensure text remains visible */
-  transition: all 0.3s ease;
-=======
   background-color: #ffb26b;
->>>>>>> 1c1402e68ebe7a5fdb19a594449391df09da5e49
 }
 
 /* Features Section */
@@ -365,12 +359,6 @@ nav ul li a:hover {
   bottom: 0;
   left: 0;
 }
-<<<<<<< HEAD
-/* Active state for interest buttons */ 
-.interests label:active { 
-  transform: scale(0.95); /* Slightly reduce size */ 
-  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(250, 41, 41) 17.8%, rgb(176, 176, 176) 100.2%); 
-=======
 .knobs {
   z-index: 2;
 }
@@ -415,7 +403,6 @@ nav ul li a:hover {
   color: white;
   text-decoration: none;
   font-size: 20px;
->>>>>>> 1c1402e68ebe7a5fdb19a594449391df09da5e49
 }
 /* Submit button styling */
 .submit-container {
