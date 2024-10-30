@@ -1,40 +1,51 @@
 {% extends "layout.html" %}
 
-{% block title %}Choose Your Interests{% endblock %}
+{% block title %}Login - Edu Bites{% endblock %}
 
 {% block content %}
-  <header>
-    <h1>Create your profile</h1> <!-- Header text -->
-  </header>
-
-  <br>
-  <h1>Choose Your Interests</h1>
-  <div class="page-container">
-    <div class="button-container">
-        <button>Math</button>
-        <button>Science</button>
-        <button>English</button>
-        <button>Social Studies</button>
-        <button>Art</button>
-        <button>Coding</button>
+  <h1 style="text-align: center;">Choose Your Interests</h1>
+  <br><br><br><br>
+  <form class="page-container" action="submit_interests.php" method="POST">
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="button r" id="button-math">
+                <input type="checkbox" class="checkbox" name="interests[]" value="Math" id="math-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="math-toggle" class="subject-label">Math</label>
+        </div>
+        <div class="toggle">
+            <div class="button r" id="button-science">
+                <input type="checkbox" class="checkbox" name="interests[]" value="Science" id="science-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="science-toggle" class="subject-label">Science</label>
+        </div>
+        <div class="toggle">
+            <div class="button r" id="button-social">
+                <input type="checkbox" class="checkbox" name="interests[]" value="Social Studies" id="social-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="social-toggle" class="subject-label">Social Studies</label>
+        </div>
+        <div class="toggle">
+            <div class="button r" id="button-english">
+                <input type="checkbox" class="checkbox" name="interests[]" value="English" id="english-toggle">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+            </div>
+            <label for="english-toggle" class="subject-label">English</label>
+        </div>
     </div>
-    <div class="center-content">
-        <button id="form-submit">Submit</button>
+    <div class="submit-container">
+        <button type="submit">
+          <a class="submitbuttonshorts" href="/shorts.html">Submit</a>
+        </button>
     </div>
-  </div>
-  <br>
-
-  <h1>Choose Your Interests</h1>
-  <form class="page-container" action="/submit_interests" method="POST">
-      <div class="interests">
-          <label><button type="button" name="interests" value="Math">Math</button></label>
-          <label><button type="button" name="interests" value="Science">Science</button></label>
-          <label><button type="button" name="interests" value="Social Studies">Social Studies</button></label>
-          <label><button type="button" name="interests" value="English">English</button></label>
-      </div>
-      <div class="submit-container">
-          <button type="submit">Submit</button>
-      </div>
   </form>
   <br>
-{% endblock %}
+  <br><br><br><br><br><br>
+  {% endblock %}
