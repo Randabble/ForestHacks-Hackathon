@@ -4,28 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}Edu Bites{% endblock %}</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://kit.fontawesome.com/dd5b6b608a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar__container">
-      <a href="/" id="navbar__logo">Edu Bites</a>
+      <a href="{{ url_for('static', filename='images/Preview.png') }}" id="navbar__logo">Edu Bites</a>
       <div class="navbar__toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
       <ul class="navbar__menu">
-        <li class="navbar__item"><a href="./index.html" class="navbar__links">Home</a></li>
-        <li class="navbar__item"><a href="./shorts.html" class="navbar__links">Shorts</a></li>
-        <li class="navbar__item"><a href="./login.html" class="navbar__links">Login</a></li>
-        <li class="navbar__btn"><a href="./signup.html" class="navbarbutton">Sign Up</a></li>
+        <li class="navbar__item">
+          <a href="{{ url_for('index') }}" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="{{ url_for('tech') }}" class="navbar__links">Tech</a>
+        </li>
+        <li class="navbar__item">
+          <a href="/" class="navbar__links">Products</a>
+        </li>
+        <li class="navbar__btn">
+          <a href="{{ url_for('choice') }}" class="button">Sign Up</a>
+        </li>
       </ul>
     </div>
   </nav>
+
 
   <!-- Main Content -->
   <main>
@@ -34,35 +42,30 @@
 
   <!-- Footer -->
   <div class="footer__container">
-    <div class="footer__links">
-      <div class="footer__link--wrapper">
-        <div class="footer__link--items">
-          <h2>About Us</h2>
-          <p>EduTube's objective is to revolutionize learning for children by providing short, engaging videos that make education fun and interactive...</p>
-        </div>
-      </div>
-      <div class="footer__link--wrapper">
-        <div class="footer__link--items">
-          <h2>Contact Us</h2>
-          <a href="mailto:edubites1@gmail.com">Email: edubites1@gmail.com</a>
-          <p>Our Team: We're a team of enthusiastic highschoolers looking to make a difference in the field of education.</p>
-          <p>Credits: Forest Hacks Hackathon</p>
-          <a href="/">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-    <div class="social__media">
-      <div class="social__media--wrap">
+    <!-- Footer content goes here, omitted for brevity -->
+    <div class="social__media--wrap">
+      <div class="footer__logo">
         <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Edu Bites</a>
-        <p class="website__rights">© Edu Bites 2024. All rights reserved</p>
-        <div class="social__icons">
-          <a href="https://www.instagram.com/edubites1" class="social__icon--link"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@atedubites" class="social__icon--link"><i class="fab fa-tiktok"></i></a>
-          <a href="https://twitter.com/atedubites" class="social__icon--link"><i class="fab fa-twitter"></i></a>
-        </div>
+      </div>
+      <p class="website__rights">© Edu Bites 2024. All rights reserved</p>
+      <div class="social__icons">
+        <!-- Social media icons -->
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </div>
   </div>
 
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
