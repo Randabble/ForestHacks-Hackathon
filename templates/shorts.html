@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <!-- Body/Shorts viewing area -->
+  <div class="shorts-container">
+    <!-- Video display area -->
+    <div id="video-display" class="video-display">
+      <video id="short-video" width="300" height="500" controls autoplay muted loop></video>
+    </div>
+  
+    <!-- Video and Channel Information -->
+     <div class="video-info">
+      <h3 id="video-title">Video Title Here</h3>
+    </div>
+
+    <!-- Like and Dislike buttons -->
+    <div class="interaction-buttons">
+      <button id="like-btn" class="icon-button">👍 <span id="like-count">0</span></button>
+      <button id="dislike-btn" class="icon-button">👎 <span id="dislike-count">0</span></button>
+      <button id="share-btn" class="icon-button">🔗 Share</button>
+    </div>
+
+    <!-- Down button for loading next video -->
+    <div class="down-button">
+        <button id="next-btn" onclick="loadNextVideo()">⬇️ Next Video</button>
+    </div>
+    <br>
+    <br>
+  </div>
+{% endblock %}
