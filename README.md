@@ -20,13 +20,13 @@ Our project streamlines the discovery of educational videos and takes a data-dri
 
 ## Team:
 
-**Yekalaivan:** Back-End Developer & Project Manager
+**Yekalaivan:** Full-Stack Developer & Project Manager
 
 **Sree:** Back-End Developer & Research Analyst
 
 **Galina:** Back-End & AI Developer
 
-**Tanishka:** Front-End Developer & UX/UI Designer
+**Tanishka:** Full-Stack Developer & UX/UI Designer
 
 ## Acknowledgments:
 
