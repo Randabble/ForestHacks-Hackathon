@@ -72,6 +72,11 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
 
+        # Ensure fields are filled
+        if not username or not password:
+            flash("Please provide both username and password.")
+            return redirect("/register")
+
         hash_pass = generate_password_hash(password)
 
         with get_db() as conn:
