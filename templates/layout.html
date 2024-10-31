@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edu Bites</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
   <script src="script.js"></script>
 </head>
 <body style="background-color: rgb(255, 223, 223)">
   <!-- navbar class -->
   <nav class="navbar">
-    <!-- creates a div with the class of navbar_container -->
     <div class="navbar__container">
-      <!-- links to logo -->
-      <a href="./index.html" id="navbar__logo">Edu Bites</a>
+      <a href="{{ url_for('index') }}" id="navbar__logo">Edu Bites</a>
       <div class="navbar__toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -21,20 +19,21 @@
       </div>
       <ul class="navbar__menu">
         <li class="navbar__item">
-          <a href="./index.html" class="navbar__links">Home</a>
+          <a href="{{ url_for('index') }}" class="navbar__links">Home</a>
         </li>
         <li class="navbar__item">
-          <a href="./shorts.html" class="navbar__links">Shorts</a>
+          <a href="{{ url_for('shorts') }}" class="navbar__links">Shorts</a>
         </li>
         <li class="navbar__item">
-          <a href="./login.html" class="navbar__links">Login</a>
+          <a href="{{ url_for('login') }}" class="navbar__links">Login</a>
         </li>
         <li class="navbar__btn">
-          <a href="./signup.html" class="navbarbutton">Sign Up</a>
+          <a href="{{ url_for('register') }}" class="navbarbutton">Sign Up</a>
         </li>
       </ul>
     </div>
   </nav>
+
 
   <!-- Main Content -->
   <div class="content">
@@ -86,6 +85,6 @@
   </div>
 </div>
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='../js/script.js') }}"></script>
 </body>
 </html>
