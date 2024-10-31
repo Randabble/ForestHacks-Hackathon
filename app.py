@@ -4,6 +4,7 @@ from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
+from datetime import datetime
 
 # Configure application
 app = Flask(__name__)
@@ -57,9 +58,59 @@ def choice():
     
     return render_template("choice.html")
 
-@app.route("/shorts")
+@app.route("/shorts", methods=["GET", "POST"])
 def shorts():
-    return render_template("shorts.html")
+    user_id = session.get("user_id")
+    if not user_id:
+        flash("Please log in to view shorts.")
+        return redirect("/login")
+
+    # Select a video to display (e.g., the next video or a random one)
+    with get_db() as conn:
+        video = conn.execute("SELECT * FROM videos ORDER BY RANDOM() LIMIT 1").fetchone()
+
+        if video:
+            # Log the video in watch_history
+            conn.execute(
+                """
+                INSERT INTO watch_history (user_id, video_id, reaction, timestamp)
+                VALUES (?, ?, NULL, ?)
+                """,
+                (user_id, video["id"], datetime.now())
+            )
+            conn.commit()
+
+    return render_template("shorts.html", video=video)
+
+@app.route("/like_video", methods=["POST"])
+def like_video():
+    user_id = session.get("user_id")
+    if not user_id:
+        return {"error": "User not logged in"}, 401
+
+    video_id = request.json.get("video_id")
+    if not video_id:
+        return {"error": "Video ID is required"}, 400
+
+    with get_db() as conn:
+        # Add like reaction in watch_history
+        conn.execute(
+            """
+            INSERT INTO watch_history (user_id, video_id, reaction, timestamp)
+            VALUES (?, ?, 1, ?)
+            """,
+            (user_id, video_id, datetime.now())
+        )
+
+        # Increment the like count in the videos table
+        conn.execute(
+            "UPDATE videos SET likes = likes + 1 WHERE id = ?",
+            (video_id,)
+        )
+        conn.commit()
+
+    return {"message": "Like recorded successfully"}, 200
+
 
 @app.route("/tech")
 def tech():
