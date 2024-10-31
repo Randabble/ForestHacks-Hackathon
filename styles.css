@@ -492,7 +492,6 @@ nav ul li a:hover {
   background-color: rgb(255, 223, 223);
 }
 .vision-text {
-  font-size: x-large;
   flex: 1;
   padding: 20px;
 }
@@ -502,7 +501,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .vision-image img {
-  max-width: 75%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
 }
@@ -523,7 +522,6 @@ nav ul li a:hover {
   flex-direction: row;
 }
 .thoughts-text {
-  font-size: x-large;
   flex: 1;
   padding: 20px;
 }
@@ -533,7 +531,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .thoughts-image img {
-  max-width: 85%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
 }
@@ -554,7 +552,6 @@ nav ul li a:hover {
   background-color: rgb(255, 223, 223);
 }
 .future-text {
-  font-size:x-large;
   flex: 1;
   padding: 20px;
 }
@@ -564,7 +561,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .future-image img {
-  max-width: 75%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
 }
