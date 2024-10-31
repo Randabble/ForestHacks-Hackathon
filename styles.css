@@ -179,7 +179,7 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-/* Features Section */
+/* features sectoin */
 .features {
   display: flex;
   justify-content: space-around;
@@ -243,6 +243,7 @@ nav ul li a:hover {
 }
 .footer__link--wrapper {
   display: flex;
+  max-width: 700px;
 }
 .aboutus {
   color: white;
@@ -251,9 +252,10 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 16px;
+  margin: 20px;
+  width: auto;
+  min-width: 300px;
   text-align: left;
-  width: 160px;
   box-sizing: border-box;
 }
 .footer__link--items h2 {
@@ -307,6 +309,8 @@ nav ul li a:hover {
 }
 .website__rights {
   color: #fff;
+  padding: 0px 15px;
+  align-items: left;
 }
 /* Full-page container */
 .page-container {
@@ -497,7 +501,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .vision-image img {
-  max-width: 75%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
 }
@@ -527,7 +531,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .thoughts-image img {
-  max-width: 85%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
 }
@@ -557,7 +561,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .future-image img {
-  max-width: 75%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
 }
