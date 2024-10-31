@@ -2,33 +2,31 @@
 
 {% block content %}
 <br>
-<h2 class="heading">Save your progress through an EduBites account!</h2>
-<br>
-<div class="container">
-    <div class="form_area">
-        <p class="title">Your Account</p>
-        <form action="">
+  <h2 class="heading">Save your progress through an EduBites account!</h2>
+  <br>
+  <div class="container">
+      <div class="form_area">
+          <p class="title">Your Account</p>
+          <form method="POST" action="/register">
             <div class="form_group">
                 <label class="sub_title" for="username">Username</label>
-                <input placeholder="Enter your username" id="name" class="form_style" type="text" required>
+                <input placeholder="Enter your username" id="username" name="username" class="form_style" type="text" required>
             </div>
             <div class="form_group">
                 <label class="sub_title" for="password">Password</label>
-                <input placeholder="Enter your password" id="password" class="form_style" type="password" required>
+                <input placeholder="Enter your password" id="password" name="password" class="form_style" type="password" required>
             </div>
             <br>
-            <p id="message" class="error-message" onclick="checkUsername()">SIGN UP to proceed</p>
             <div class="submit-container">
-              <button type="submit">
-                <a class="submitbuttonshorts" href="/choice.html">Sign Up</a>
-              </button>
+                <button type="submit" class="submitbuttonshorts">Sign Up</button>
             </div>
             <br>
         </form>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<br>
+        
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+  <h2 class="heading">Log in to your EduBites account and start learning!</h2>
+  <br>
+  <div class="container">
+      <div class="form_area">
+          <p class="title">Your Account</p>
+          <!-- Update form action to "/login" and method to "POST" -->
+          <form action="/login" method="POST">
+              <div class="form_group">
+                  <label class="sub_title" for="username">Username</label>
+                  <!-- Add name attribute for the form to send correct data -->
+                  <input placeholder="Enter your username" id="username" name="username" class="form_style" type="text" required>
+              </div>
+              <div class="form_group">
+                  <label class="sub_title" for="password">Password</label>
+                  <!-- Add name attribute for the form to send correct data -->
+                  <input placeholder="Enter your password" id="password" name="password" class="form_style" type="password" required>
+              </div>
+              <br>
+              <p id="message" class="error-message">LOG IN to proceed</p>
+              <div class="submit-container">
+                <!-- Remove <a> tag; the button itself submits the form -->
+                <button type="submit" class="submitbuttonshorts">Log In</button>
+              </div>
+              <br>
+          </form>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+{% endblock %}
