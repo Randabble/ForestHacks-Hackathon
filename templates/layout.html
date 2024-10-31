@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edu Bites</title>
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <script src="script.js"></script>
+  <title>{% block title %}Edu Bites{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://kit.fontawesome.com/dd5b6b608a.js" crossorigin="anonymous"></script>
 </head>
-<body style="background-color: rgb(255, 223, 223)">
-  <!-- navbar class -->
+<body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar__container">
-      <a href="{{ url_for('index') }}" id="navbar__logo">Edu Bites</a>
+      <a href="{{ url_for('static', filename='images/Preview.png') }}" id="navbar__logo">Edu Bites</a>
       <div class="navbar__toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -22,13 +22,13 @@
           <a href="{{ url_for('index') }}" class="navbar__links">Home</a>
         </li>
         <li class="navbar__item">
-          <a href="{{ url_for('shorts') }}" class="navbar__links">Shorts</a>
+          <a href="{{ url_for('tech') }}" class="navbar__links">Tech</a>
         </li>
         <li class="navbar__item">
-          <a href="{{ url_for('login') }}" class="navbar__links">Login</a>
+          <a href="/" class="navbar__links">Products</a>
         </li>
         <li class="navbar__btn">
-          <a href="{{ url_for('register') }}" class="navbarbutton">Sign Up</a>
+          <a href="{{ url_for('choice') }}" class="button">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -36,55 +36,36 @@
 
 
   <!-- Main Content -->
-  <div class="content">
+  <main>
     {% block content %}{% endblock %}
-  </div>
+  </main>
 
-<!-- Footer -->
-<div class="footer__container">
-  <div class="footer__links">
-    <div class="footer__link--wrapper">
-      <div class="footer__link--items">
-        <h2>About Us</h2>
-
-        <div class="aboutus">EduTube's objective is to revolutionize learning for children by providing short, engaging videos that make education fun and interactive. Our vision is to inspire young learners to explore a variety of subjects in an exciting way, promoting curiosity and growth with gamified learning experiences and personalized content</div>
-      </div>
-    </div>
-    <div class="footer__link--wrapper">
-      <div class="footer__link--items">
-        <h2>Contact Us</h2>
-        <a href="mailto:edubites@gmail.com">Email: edubites@gmail.com</a>
-        <div style = "color:white">Our Team: We're a team of enthusiastic highschoolers looking to make a difference in the field of education</div>
-        <br>
-        <div style = "color:white">Credits: Forest Hacks Hackathon</div>
-        <br>
-        <a href="/">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-  <div class="social__media">
+  <!-- Footer -->
+  <div class="footer__container">
+    <!-- Footer content goes here, omitted for brevity -->
     <div class="social__media--wrap">
       <div class="footer__logo">
         <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Edu Bites</a>
       </div>
       <p class="website__rights">© Edu Bites 2024. All rights reserved</p>
       <div class="social__icons">
-        <a href="https://www.instagram.com/edubites1" class="social__icon--link" target="_blank" rel="noopener noreferrer">
+        <!-- Social media icons -->
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
-        
-        <a href="https://www.tiktok.com/@atedubites" class="social__icon--link" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-tiktok"></i>
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-youtube"></i>
         </a>
-        
-        <a href="https://twitter.com/atedubites" class="social__icon--link" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-twitter"></i>
-        </a>          
+        <a href="/" class="social__icon--link" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </div>
   </div>
-</div>
 
-<script src="{{ url_for('static', filename='../js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Sign Up - Edu Bites{% endblock %}
+
+{% block content %}
+<body style="background-color: rgb(255, 223, 223);">
+  <br>
+  <h2 class="heading">Save your progress through an EduBites account!</h2>
+  <br>
+  <div class="container">
+    <div class="form_area">
+      <p class="title">Your Account</p>
+      <form action="/signup" method="POST">
+        <div class="form_group">
+          <label class="sub_title" for="username">Username</label>
+          <input placeholder="Enter your username" id="name" class="form_style" type="text" name="username" required>
+        </div>
+        <div class="form_group">
+          <label class="sub_title" for="password">Password</label>
+          <input placeholder="Enter your password" id="password" class="form_style" type="password" name="password" required>
+        </div>
+        <br>
+        <p id="message" class="error-message">SIGN UP to proceed</p>
+        <div class="submit-container">
+          <button type="submit" class="submitbuttonshorts">Sign Up</button>
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+  <br><br><br><br>
+</body>
+{% endblock %}
