@@ -81,14 +81,14 @@ def register():
 
         with get_db() as conn:
             try:
-                conn.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, hash_pass))
+                conn.execute("INSERT INTO users (username, password_hash) VALUES (?, ?)", (username, hash_pass))
                 conn.commit()
             except sqlite3.IntegrityError:
                 flash("Username already exists.")
                 return redirect("/register")
 
         flash("Registered successfully! Please log in.")
-        return redirect("/login")
+        return redirect("/shorts")
     
     return render_template("register.html")
 
@@ -104,17 +104,27 @@ def login():
             return redirect("/login")
 
         with get_db() as conn:
+            conn.row_factory = sqlite3.Row  # Ensures results are dictionary-like
             user = conn.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
 
-        if user is None or not check_password_hash(user["hash"], password):
-            flash("Invalid username or password.")
+        # Check if user exists
+        if user is None:
+            flash("No account found with that username.")
             return redirect("/login")
 
+        # Verify password
+        if not check_password_hash(user["password_hash"], password):
+            flash("Password does not match the username.")
+            return redirect("/login")
+
+        # Log the user in
         session["user_id"] = user["id"]
         flash("Logged in successfully!")
-        return redirect("/")
-    
+        return redirect("/shorts")  # Redirect to /shorts as per your flow
+
     return render_template("login.html")
+
+
 
 @app.route("/logout")
 def logout():
