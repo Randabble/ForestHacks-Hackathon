@@ -65,10 +65,6 @@ def shorts():
 def tech():
     return render_template("tech.html")
 
-@app.route("/choice")
-def tech():
-    return render_template("choice.html")
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
